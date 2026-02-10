@@ -1,0 +1,13 @@
+﻿<!doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Sender</title>
+<style>body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;max-width:720px;margin:30px auto;padding:0 16px}.muted{color:#666}button{padding:10px 12px;border-radius:10px;border:1px solid #111;background:#111;color:#fff}</style>
+</head><body>
+<h2>Helper</h2>
+<p class="muted">Send a message to the opener.</p>
+<button id="go">Send</button>
+<script>
+  document.querySelector('#go').addEventListener('click', () => {
+    opener.postMessage({type:'GET_FLAG'}, '*');
+  });
+</script>
+</body></html>
